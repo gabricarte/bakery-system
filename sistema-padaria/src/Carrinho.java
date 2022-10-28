@@ -85,12 +85,13 @@ public class Carrinho {
     
     //Método que mostra o recibo total da compra
     public void mostrarDados(){
-        System.out.println("------ Recibo  ------");
-        System.out.println("Pães: " + this.quantPao);
-        System.out.println("Bebidas: " + this.quantBebidas);
-        System.out.println("Doces: " + this.quantDoces);
-        System.out.println("Salgados: " + this.quantSalgados);
-        System.out.println("Total a pagar: R$" + new DecimalFormat("#,##0.00").format(this.total));
+        String mensagem = "------ Recibo  ------" + "\n";
+        mensagem+= "Pães: " + this.quantPao + "\n";
+        mensagem+= "Bebidas: " + this.quantBebidas + "\n";
+        mensagem+= "Doces: " + this.quantDoces + "\n";
+        mensagem+= "Salgados: " + this.quantSalgados + "\n";
+        mensagem+= "Total a pagar: R$" + new DecimalFormat("#,##0.00").format(this.total);
+        JOptionPane.showMessageDialog(null, mensagem);
     }
     
     
